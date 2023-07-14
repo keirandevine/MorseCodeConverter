@@ -1,9 +1,10 @@
 from morse_converter import MorseConverter
 import tkinter
 
+#________________Create morse converter object____________________#
 converter = MorseConverter()
 
-#Create a function that gets hold of the input, applies converter methods and displays morse label
+#_____Function takes app input, converts to morse and updates the output label______#
 def convert():
     message = entry.get().lower()
     print(message)
@@ -14,7 +15,7 @@ def convert():
 
 
 
-#Set up window in TKinter with Labels, Inputs, Outputs and Buttons
+#____________________________TKinter GUI Setup_________________________#
 window = tkinter.Tk()
 window.config(padx=30, pady=50)
 window.title('Morse Converter')
@@ -44,27 +45,6 @@ button.grid(row=4, column=1)
 
 morse_out_label = tkinter.Label(text='Morse Code: ')
 morse_out_label.grid(row=5, column=1)
-
-
-
-
-
-#
-# #Prompt user to input a string
-# # input = entry.get()
-#
-#
-# #Take user input and convert to list
-# converter.string_to_list(string=input)
-#
-# # Convert character list to a morse code string
-# converter.to_morse()
-# morse_string = converter.to_string()
-#
-# # Print the result
-# print(f'In morse code, this is: {morse_string}')
-#
-
 
 
 window.mainloop()
